@@ -1,0 +1,29 @@
+h1 {
+    font-size: xxx-large;
+    text-align: center;
+}
+
+section {
+    padding-top: 60px;
+    margin: 20px;
+}
+
+.mat-card {
+    margin: 10px;
+    box-shadow: none;
+    background: none;
+}
+
+.mat-card-header {
+    justify-content: center;
+}
+
+.mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card-actions {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,75 @@
+<app-background></app-background>
+<section>
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna
+        sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra
+        imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor.
+        Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc.
+        Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+    </p>
+</section>
+<section class="contact-me">
+    <address>
+        <div class="address-section">
+            <a href="{{phoneLink}}">
+                <mat-icon>call</mat-icon>
+            </a>
+            <span>(440) 409-6403</span>
+        </div>
+        <div class="address-section">
+            <a href="{{emailLink}}">
+                <mat-icon>mail</mat-icon>
+            </a>
+            <span>carlielaurienzo@gmail.com</span>
+        </div>
+        <div class="address-section">
+            <a href="{{instagramLink}}" target="_blank">
+                <i class="gg-instagram"></i>
+            </a>
+            <span>instagram.com/laurienzohairco/</span>
+        </div>
+        <div class="address-section">
+            <mat-icon>location_on</mat-icon>
+            <iframe class="opal-oak-salon" loading="lazy" allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJs9P2qrqr3oAROjrtmAkb2Pw&key=AIzaSyCz2M3NfHqwXUHxITBe75atzeMVFICWXgQ">
+            </iframe>
+        </div>
+    </address>
+
+    <form [formGroup]="customerForm" (ngSubmit)="submit()">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" name="firstName" type="text" (blur)="update()" required
+                minlength="1" maxlength="200">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" name="lastName" type="text" (blur)="update()" required
+                minlength="1" maxlength="200">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="janedoe@example.com" formControlName="email" name="email" type="email"
+                (blur)="update()">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input matInput phoneNumberFormatter formControlName="phoneNumber" name="phoneNumber" type="tel"
+                (blur)="update()" maxlength="10">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput #description maxlength="140"
+                placeholder="Please describe the services your interested in." formControlName="description"
+                name="description" (blur)="update()"></textarea>
+            <mat-hint>{{description.value.length}} / 140</mat-hint>
+        </mat-form-field>
+        <div class="submit-wrapper">
+            <!--<mat-error *ngIf="customerForm.errors?.missingContactInfo && customerForm.touched">Please provide atleast one form of contact information</mat-error>-->
+            <button mat-fab [disabled]="customerForm.invalid" type="submit">
+                <mat-icon class="send-icon">send</mat-icon>
+            </button>
+        </div>
+    </form>
+</section>

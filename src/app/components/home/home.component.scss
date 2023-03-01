@@ -1,0 +1,50 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.laurienzo-hair-co {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    animation: fadeIn 0.8s linear;
+}
+
+.eucalypt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    animation: fadeIn 0.8s linear;
+}
+
+.profile {
+    display: block;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.about-me-section {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    animation: fadeIn 3s linear;
+}
+
+.about-me {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+
+section {
+    padding: 40px;
+}

@@ -1,0 +1,51 @@
+<app-background></app-background>
+<section>
+    <h1>HAIRCUTS</h1>
+    <mat-card *ngFor="let cut of haircuts; index as i;">
+        <mat-card-header>
+            <mat-card-title>
+                {{cut.type}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            {{cut.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>{{cut.price | currency}}</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+<section>
+    <h1>COLOR</h1>
+    <mat-card *ngFor="let color of colors; index as i;">
+        <mat-card-header>
+            <mat-card-title>
+                {{color.type}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            {{color.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>{{color.price | currency}}</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+<section>
+    <h1>STYLE</h1>
+    <mat-card *ngFor="let style of styles; index as i;">
+        <mat-card-header>
+            <mat-card-title>
+                {{style.type}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            {{style.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>{{style.price | currency}}</button>
+        </mat-card-actions>
+    </mat-card>
+</section>

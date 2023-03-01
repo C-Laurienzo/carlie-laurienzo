@@ -1,0 +1,65 @@
+section {
+    padding: 40px;
+}
+
+form {
+    width: 50%;
+}
+
+address {
+    width: 50%;
+}
+
+p {
+    margin: 30px;
+}
+
+a {
+    color: black;
+}
+
+textarea {
+    height: 90px;
+}
+
+.address-section {
+    display: flex;
+    margin: 15px;
+}
+
+.opal-oak-salon {
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.mat-form-field {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+
+.contact-me {
+    display: flex;
+}
+
+.mat-icon {
+    margin-right: 20px;
+}
+
+.gg-instagram {
+    margin-right: 20px;
+}
+
+.submit-wrapper {
+    margin-right: auto;
+    margin-left: 25%;
+    margin-top: 5%;
+    display: block;
+}
+
+.send-icon {
+    margin: auto;
+    color: white;
+}
