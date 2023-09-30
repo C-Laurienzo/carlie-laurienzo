@@ -1,33 +1,33 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
-import { customerInfoEnum } from "../models/customer-info.enum";
-import { ICustomerInfo } from "../models/customer-info.interface";
+import { type customerInfoEnum } from '../models/customer-info.enum'
+import { type ICustomerInfo } from '../models/customer-info.interface'
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CustomerService {
-    private customerInfo: ICustomerInfo;
+  private customerInfo: ICustomerInfo
 
-    constructor() {
-        this.customerInfo = {
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            email: '',
-            description: ''
-        };
+  constructor () {
+    this.customerInfo = {
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      email: '',
+      description: ''
     }
+  }
 
-    public get = (field: customerInfoEnum): string => {
-        return this.customerInfo[field];
-    }
+  public get = (field: customerInfoEnum): string => {
+    return this.customerInfo[field]
+  }
 
-    public set = (field: customerInfoEnum, value: string): void => {
-        this.customerInfo[field] = value
-    }
+  public set = (field: customerInfoEnum, value: string): void => {
+    this.customerInfo[field] = value
+  }
 
-    public publish = (): void => {
-        console.log('PUBLISHING VALUE: ', this.customerInfo)
-    } 
+  public publish = (): void => {
+    console.log('PUBLISHING VALUE: ', this.customerInfo)
+  }
 }

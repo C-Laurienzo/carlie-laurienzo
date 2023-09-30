@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { customerInfoEnum } from 'src/app/models/customer-info.enum';
-import { CustomerService } from 'src/app/services/customer.service';
-import { contactInformationValidator } from 'src/app/validators/contact-information.validator';
-import { regexFormControlValidator } from 'src/app/validators/regex-form-control.validator';
+import { Component, type OnInit } from '@angular/core'
+import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { customerInfoEnum } from 'src/app/models/customer-info.enum'
+import { type CustomerService } from 'src/app/services/customer.service'
+import { contactInformationValidator } from 'src/app/validators/contact-information.validator'
+import { regexFormControlValidator } from 'src/app/validators/regex-form-control.validator'
 
 @Component({
   selector: 'app-booking',
@@ -11,12 +11,12 @@ import { regexFormControlValidator } from 'src/app/validators/regex-form-control
   styleUrls: ['./booking.component.scss']
 })
 export class BookingComponent implements OnInit {
-  public phoneLink: string | undefined;
-  public emailLink: string | undefined;
-  public instagramLink: string | undefined;
-  public customerForm: FormGroup;
+  public phoneLink: string | undefined
+  public emailLink: string | undefined
+  public instagramLink: string | undefined
+  public customerForm: FormGroup
 
-  constructor(private customerService: CustomerService) {
+  constructor (private readonly customerService: CustomerService) {
     this.customerForm = new FormGroup({
       firstName: new FormControl(
         customerService.get(customerInfoEnum.firstName),
@@ -57,10 +57,10 @@ export class BookingComponent implements OnInit {
     }, { validators: contactInformationValidator })
   }
 
-  ngOnInit(): void {
-    this.phoneLink = 'tel:4404096403';
-    this.emailLink = 'mailto:carlielaurienzo@gmail.com?subject=Appointment Request';
-    this.instagramLink = 'https://www.instagram.com/laurienzohairco/';
+  ngOnInit (): void {
+    this.phoneLink = 'tel:4404096403'
+    this.emailLink = 'mailto:carlielaurienzo@gmail.com?subject=Appointment Request'
+    this.instagramLink = 'https://www.instagram.com/laurienzohairco/'
   }
 
   public submit = () => {
@@ -69,8 +69,8 @@ export class BookingComponent implements OnInit {
   }
 
   public update = () => {
-    //console.log('Customer Form: ', this.customerForm)
-    for (let field in this.customerForm.value) {
+    // console.log('Customer Form: ', this.customerForm)
+    for (const field in this.customerForm.value) {
       if (this.customerForm.controls[field].valid) {
         this.customerService.set((field as customerInfoEnum), this.customerForm.value[field])
       }

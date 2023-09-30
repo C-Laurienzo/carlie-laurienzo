@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { HairServices } from 'src/app/models/hair-services.interface';
+import { Component, type OnInit } from '@angular/core'
+import { type HairServices } from 'src/app/models/hair-services.interface'
 
 @Component({
   selector: 'app-pricing',
@@ -7,9 +7,9 @@ import { HairServices } from 'src/app/models/hair-services.interface';
   styleUrls: ['./pricing.component.scss']
 })
 export class PricingComponent implements OnInit {
-  public haircuts: HairServices[] | undefined;
-  public colors: HairServices[] | undefined;
-  public styles: HairServices[] | undefined;
+  public haircuts: HairServices[] | undefined
+  public colors: HairServices[] | undefined
+  public styles: HairServices[] | undefined
 
   constructor () { }
 
@@ -30,7 +30,7 @@ export class PricingComponent implements OnInit {
         description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.',
         price: 45
       }
-    ];
+    ]
 
     this.colors = [
       {
@@ -83,7 +83,7 @@ export class PricingComponent implements OnInit {
         description: '',
         price: 275
       }
-    ];
+    ]
 
     this.styles = [
       {
@@ -106,6 +106,6 @@ export class PricingComponent implements OnInit {
         description: '',
         price: 160
       }
-    ];
+    ]
   }
 }
