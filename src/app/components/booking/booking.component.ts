@@ -60,7 +60,7 @@ export class BookingComponent implements OnInit {
   ngOnInit(): void {
     this.phoneLink = 'tel:4404096403';
     this.emailLink = 'mailto:carlielaurienzo@gmail.com?subject=Appointment Request';
-    this.instagramLink = 'https://www.instagram.com/laurienzohairco/'
+    this.instagramLink = 'https://www.instagram.com/laurienzohairco/';
   }
 
   public submit = () => {

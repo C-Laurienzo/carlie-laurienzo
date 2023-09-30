@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
+
+$primary-palette: (
+    50: #FFFFFF,
+    100: #FAFAFA,
+    200: #F5F5F5,
+    300: #F0F0F0,
+    400: #DEDEDE,
+    500: #C2C2C2,
+    600: #979797,
+    700: #818181,
+    800: #606060,
+    900: #3C3C3C,
+    contrast: (
+        50: #E6E6E6,
+        100: #E1E1E1,
+        200: #DCDCDC,
+        300: #D6D6D6,
+        400: #C5C5C5,
+        500: #A9A9A9,
+        600: #7E7E7E,
+        700: #686868,
+        800: #7A7A7A,
+        900: #565656
+    )
+);
+
+$accent-palette: (
+    50: #000000,
+    100: #262626,
+    200: #434343,
+    300: #555555,
+    400: #7B7B7B,
+    500: #9D9D9D,
+    600: #C4C4C4,
+    700: #D9D9D9,
+    800: #E9E9E9,
+    900: #F5F5F5,
+    contrast: (
+        50: #1A1A1A,
+        100: #404040,
+        200: #5D5D5D,
+        300: #6E6E6E,
+        400: #959595,
+        500: #848484,
+        600: #ABABAB,
+        700: #C0C0C0,
+        800: #D0D0D0,
+        900: #DCDCDC
+    )
+);
+
+@include mat.core();
+
+$primary: mat.define-palette($primary-palette, 800, 100, 900);
+$accent: mat.define-palette($accent-palette, 100, 50, 900);
+$typography: mat.define-typography-config(
+  $font-family: 'Helvetica Neue',
+);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+  ),
+  typography: $typography
+));
+
+@include mat.all-component-themes($theme);
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}

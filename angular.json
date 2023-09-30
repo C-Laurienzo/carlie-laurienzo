@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "carlie-laurienzo"
+  "defaultProject": "carlie-laurienzo",
+  "cli": {
+    "analytics": false
+  }
 }
