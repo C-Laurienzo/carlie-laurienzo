@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, type Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 
 import { PortfolioComponent } from 'src/app/components/portfolio/portfolio.component'
 

@@ -1,5 +1,5 @@
-import { Component, type OnInit } from '@angular/core'
-import { type HairServices } from 'src/app/models/hair-services.interface'
+import { Component, OnInit } from '@angular/core'
+import { HairServices } from 'src/app/models/hair-services.interface'
 
 @Component({
   selector: 'app-pricing',
@@ -11,9 +11,9 @@ export class PricingComponent implements OnInit {
   public colors: HairServices[] | undefined
   public styles: HairServices[] | undefined
 
-  constructor () { }
+  constructor() { }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
     this.haircuts = [
       {
         type: 'Women\'s Haircut',

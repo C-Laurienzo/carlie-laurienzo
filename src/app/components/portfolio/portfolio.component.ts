@@ -1,4 +1,4 @@
-import { Component, type OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-portfolio',
@@ -6,8 +6,8 @@ import { Component, type OnInit } from '@angular/core'
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  constructor () { }
+  constructor() { }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
   }
 }

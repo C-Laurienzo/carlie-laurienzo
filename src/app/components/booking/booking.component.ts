@@ -1,7 +1,7 @@
-import { Component, type OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { customerInfoEnum } from 'src/app/models/customer-info.enum'
-import { type CustomerService } from 'src/app/services/customer.service'
+import { CustomerService } from 'src/app/services/customer.service'
 import { contactInformationValidator } from 'src/app/validators/contact-information.validator'
 import { regexFormControlValidator } from 'src/app/validators/regex-form-control.validator'
 

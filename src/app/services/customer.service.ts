@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 
-import { type customerInfoEnum } from '../models/customer-info.enum'
-import { type ICustomerInfo } from '../models/customer-info.interface'
+import { customerInfoEnum } from '../models/customer-info.enum'
+import { ICustomerInfo } from '../models/customer-info.interface'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { type ICustomerInfo } from '../models/customer-info.interface'
 export class CustomerService {
   private customerInfo: ICustomerInfo
 
-  constructor () {
+  constructor() {
     this.customerInfo = {
       firstName: '',
       lastName: '',
