@@ -1,5 +1,8 @@
 <app-background></app-background>
 <section>
+    <h3>*** The following prices are starting prices and may vary. ***</h3>
+</section>
+<section>
     <h1>HAIRCUTS</h1>
     <mat-card *ngFor="let cut of haircuts; index as i;">
         <mat-card-header>
@@ -11,7 +14,11 @@
             {{cut.description}}
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>{{cut.price | currency}}</button>
+            <button mat-button 
+                    (click)="inquire(cut)"
+                    [routerLink]="['/booking']">
+                {{cut.price | currency}}
+            </button>
         </mat-card-actions>
     </mat-card>
 </section>
@@ -28,7 +35,11 @@
             {{color.description}}
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>{{color.price | currency}}</button>
+            <button mat-button
+                    (click)="inquire(color)"
+                    [routerLink]="['/booking']">
+                {{color.price | currency}}
+            </button>
         </mat-card-actions>
     </mat-card>
 </section>
@@ -45,7 +56,11 @@
             {{style.description}}
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>{{style.price | currency}}</button>
+            <button mat-button
+                    (click)="inquire(style)"
+                    [routerLink]="['/booking']">
+                {{style.price | currency}}
+            </button>
         </mat-card-actions>
     </mat-card>
 </section>

@@ -83,3 +83,16 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
 }
+
+.snack-bar-notification {
+  background-color: white;
+  text-align: center;
+
+  &--success {
+    color: green;
+  }
+
+  &--fail {
+    color: red;
+  }
+}

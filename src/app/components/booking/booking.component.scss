@@ -1,17 +1,31 @@
+@import 'bootstrap';
+
 section {
     padding: 40px;
 }
 
 form {
+    @include make-col-ready();
+    @include make-col(6);
+    @include media-breakpoint-down(md) {
+        @include make-col(12);
+    }
+
     width: 50%;
 }
 
 address {
+    @include make-col-ready();
+    @include make-col(6);
+    @include media-breakpoint-down(md) {
+        @include make-col(12);
+    }
     width: 50%;
 }
 
 p {
     margin: 30px;
+    font-size: larger;
 }
 
 a {
@@ -41,6 +55,8 @@ textarea {
 }
 
 .contact-me {
+    @include make-row();
+
     display: flex;
 }
 
@@ -62,4 +78,8 @@ textarea {
 .send-icon {
     margin: auto;
     color: white;
+}
+
+button {
+    border-radius: 50%;
 }

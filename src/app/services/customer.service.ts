@@ -27,7 +27,26 @@ export class CustomerService {
     this.customerInfo[field] = value
   }
 
-  public publish = (): void => {
-    console.log('PUBLISHING VALUE: ', this.customerInfo)
+  public reset = (): void => {
+    this.customerInfo = {
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      email: '',
+      description: ''
+    }
+  }
+
+  public publish = (): Promise<void> => {
+    return fetch('https://api.laurienzohairco.com/contact-me', {
+      method: 'POST',
+      mode: "cors",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.customerInfo)
+    })
+    .then(() => this.reset())
+    .catch(() => console.log('Failed'))
   }
 }

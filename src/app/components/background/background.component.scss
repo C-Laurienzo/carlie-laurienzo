@@ -1,4 +1,26 @@
+@import 'bootstrap';
+
 .eucalypt-top {
+    @include media-breakpoint-down(xl) {
+        width: 35%;
+        height: 27%;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 40%;
+        height: 25%;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 45%;
+        height: 22%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 50%;
+        height: 20%;
+    }
+
     position: fixed;
     top: 0;
     left: 0;
@@ -8,6 +30,26 @@
 }
 
 .eucalypt-bottom {
+    @include media-breakpoint-down(xl) {
+        width: 35%;
+        height: 27%;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 40%;
+        height: 25%;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 45%;
+        height: 22%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 50%;
+        height: 20%;
+    }
+
     position: fixed;
     bottom: 0;
     right: 0;

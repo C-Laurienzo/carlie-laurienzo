@@ -1,7 +1,7 @@
 export interface ICustomerInfo {
   firstName: string
   lastName: string
-  email: string
   phoneNumber: string
+  email: string
   description: string
 }
