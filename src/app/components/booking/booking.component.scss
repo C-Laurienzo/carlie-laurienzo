@@ -1,4 +1,4 @@
-@import 'bootstrap';
+@import 'bootstrap/scss/bootstrap-grid';
 
 section {
     padding: 40px;
@@ -48,6 +48,10 @@ textarea {
 }
 
 .mat-form-field {
+    @include media-breakpoint-down(md) {
+        width: 75%;
+    }
+
     margin-left: auto;
     margin-right: auto;
     display: block;
