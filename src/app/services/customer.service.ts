@@ -37,7 +37,7 @@ export class CustomerService {
     }
   }
 
-  public publish = (): Promise<void> => {
+  public publish = (): Promise<Response> => {
     return fetch('https://api.laurienzohairco.com/contact-me', {
       method: 'POST',
       mode: "cors",
@@ -46,7 +46,5 @@ export class CustomerService {
       },
       body: JSON.stringify(this.customerInfo)
     })
-    .then(() => this.reset())
-    .catch(() => console.log('Failed'))
   }
 }

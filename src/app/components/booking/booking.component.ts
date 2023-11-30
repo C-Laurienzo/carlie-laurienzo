@@ -73,6 +73,7 @@ export class BookingComponent implements OnInit {
     if(this.customerForm.valid) {
       this.customerService.publish()
         .then(() => {
+          this.customerService.reset()
           this.customerFormDirective.resetForm()
           this.customerForm.reset()
 
